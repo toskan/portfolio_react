@@ -1,7 +1,36 @@
 import React from 'react';
 
 const ModalContent = (props) => {
-	const { slidesState, backSlide, forwardSlide } = props;
+	const {
+		slidesState,
+		setArrIdx,
+		arrIdx,
+		workIndex,
+		setSlide,
+		images,
+	} = props;
+	const forwardSlide = () => {
+		let idxPlus = arrIdx + 1;
+		setArrIdx(idxPlus);
+		setSlide(images[workIndex][idxPlus]);
+		if (idxPlus === images[workIndex].length - 2) {
+			setTimeout(function () {
+				document.getElementById('display-right').style.visibility =
+					'hidden';
+			}, 5);
+		}
+	};
+	const backSlide = () => {
+		let idxMinus = arrIdx - 1;
+		setArrIdx(idxMinus);
+		setSlide(images[workIndex][idxMinus]);
+		if (idxMinus === 0) {
+			setTimeout(function () {
+				document.getElementById('display-left').style.visibility =
+					'hidden';
+			}, 1);
+		}
+	};
 	return (
 		<div className="modal-container">
 			<div className="slides-content">

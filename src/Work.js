@@ -13,38 +13,16 @@ const Work = () => {
 		firstImages.push(images[i][0]);
 	}
 	const [slidesState, setSlide] = useState(null);
-	let [arrIdx, setArrIdx] = useState(0);
-	let [workIndex, setWorkIndex] = useState(0);
+	const [arrIdx, setArrIdx] = useState(0);
+	const [workIndex, setWorkIndex] = useState(0);
 	const toggleModalOpen = () => setIsModalOpen((prev) => !prev);
 	const getIndex = (index) => {
 		setWorkIndex(index);
 		setSlide(images[index][arrIdx]);
-		console.log(arrIdx);
+		setTimeout(function () {
+			document.getElementById('display-left').style.visibility = 'hidden';
+		}, 5);
 	};
-	const forwardSlide = () => {
-		setArrIdx(arrIdx++);
-		setSlide(images[workIndex][arrIdx]);
-		console.log(arrIdx);
-	};
-	const backSlide = () => {
-		setArrIdx(arrIdx--);
-		setSlide(images[workIndex][arrIdx]);
-		console.log(arrIdx);
-	};
-	// const arrowShowHide = () => {
-	// 	if (arrIdx === 0) {
-	// 		setTimeout(function () {
-	// 			document.getElementById('display-left').style.visibility =
-	// 				'hidden';
-	// 		}, 5);
-	// 	}
-	// 	if (arrIdx === images[workIndex].length - 2) {
-	// 		setTimeout(function () {
-	// 			document.getElementById('display-right').style.visibility =
-	// 				'hidden';
-	// 		}, 5);
-	// 	}
-	// };
 	return (
 		<div className="work-div">
 			<ImageGrid
@@ -64,9 +42,11 @@ const Work = () => {
 				<ModalContent
 					toggleModalOpen={toggleModalOpen}
 					slidesState={slidesState}
-					backSlide={backSlide}
-					forwardSlide={forwardSlide}
+					arrIdx={arrIdx}
 					setArrIdx={setArrIdx}
+					workIndex={workIndex}
+					setSlide={setSlide}
+					images={images}
 				/>
 			</ModalComponent>
 		</div>
