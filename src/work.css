@@ -1,0 +1,122 @@
+.work-div {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1em 5em 1em 4em;
+	justify-content: center;
+}
+.grid-image-div {
+	height: auto;
+	flex-basis: 33.33%;
+	padding: 1em;
+	display: flex;
+	justify-content: center;
+}
+.grid-img {
+	width: 65%;
+	height: auto;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+.grid-img:hover {
+	opacity: 0.2;
+}
+.grid-image-div > svg {
+	width: 3em;
+	height: auto;
+	color: white;
+	position: absolute;
+	align-items: center;
+	align-self: center;
+}
+#modal-slides {
+	margin: 0;
+}
+.modal {
+	z-index: 3;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(94, 107, 119, 0.2);
+}
+.modal-content {
+	margin: auto;
+	background-color: transparent;
+	position: relative;
+	padding: 3em 2em;
+	outline: 0;
+	width: 70%;
+	height: 100vh;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.button-display-topright {
+	cursor: pointer;
+	position: absolute;
+	left: 2em;
+	top: 0.5em;
+	font-size: 4em;
+	color: white;
+}
+.met-link-ul {
+	list-style: none;
+	margin-left: -25px;
+	padding-bottom: 20px;
+}
+.met-link-a {
+	text-decoration: none;
+	outline: none;
+	color: black;
+}
+.met-link-a:hover {
+	color: darkgrey;
+}
+.slides-div {
+	padding-top: 20px;
+}
+.slides-div > h2 {
+	margin-left: 15px;
+}
+.modal-images {
+	width: 450px;
+	height: auto;
+}
+.slides-div > h3 {
+	margin-left: 15px;
+}
+#display-left {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translate(0%, -50%);
+	-ms-transform: translate(-0%, -50%);
+	-webkit-transform: translate(0%, -50%);
+	font-size: 3em;
+	background-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	outline: none;
+	padding: 0;
+	border: none;
+	color: white;
+}
+#display-right {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	transform: translate(0%, -50%);
+	-ms-transform: translate(0%, -50%);
+	-webkit-transform: translate(0%, -50%);
+	font-size: 3em;
+	background-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	outline: none;
+	padding: 0;
+	border: none;
+	color: white;
+}

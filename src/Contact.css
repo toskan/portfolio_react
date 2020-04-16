@@ -1,0 +1,67 @@
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: center; */
+	height: 77vh;
+}
+.content-contact {
+}
+.contact-me {
+}
+.contact-me > h3 {
+	font-size: 2.5em;
+	font-weight: 500;
+	color: white;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.form-div {
+}
+.form-contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.form-contact > * {
+	background-color: #e4e5e6;
+	color: #727983;
+	padding: 1em;
+	margin: 0.5em;
+	border: none;
+	width: 150%;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 1em;
+}
+.visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.project-images {
+	height: 20em;
+	width: auto;
+}
+.welcome-div {
+	height: auto;
+}
+.welcome-h2 {
+	font-size: 7em;
+	font-weight: 100;
+	color: #191970;
+	text-shadow: 0 0 80px rgba(255, 255, 255, 0.3);
+}
+.welcome-h2 > span {
+	font-weight: 100;
+}
+#submit {
+	background-color: #191970;
+	color: white;
+	font-size: 1.3em;
+	padding: 0.65em;
+}

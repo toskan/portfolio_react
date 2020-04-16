@@ -1,0 +1,132 @@
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Noto Sans JP', sans-serif;
+	margin: auto 0;
+	background-color: #7e7e7e;
+}
+#root {
+	opacity: 1;
+	transition: opacity 0.3s linear;
+}
+#root.opaque {
+	opacity: 0.1;
+	transition: opacity 0.3s linear;
+}
+.main {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+.header-div {
+	display: flex;
+	width: 100%;
+}
+.main-header-div {
+	color: white;
+	margin-right: 0.5em;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+.main-header-div-top {
+	display: flex;
+}
+.title-div {
+	padding: 2em 1em 0 2em;
+	display: flex;
+}
+.title {
+	margin: 0.05em;
+	font-weight: 400;
+	font-size: 2.4em;
+}
+.circle {
+	margin-right: 0.5em;
+	margin-left: 0.5em;
+	width: 1.4em;
+	height: 1.4em;
+	border: 0.2em solid #191970;
+	border-radius: 1.6em;
+	margin-top: 0.8em;
+}
+.lines-bottom {
+	padding-left: 2em;
+}
+.lines-bottom > div {
+	margin-bottom: 0.4em;
+	border-bottom: 0.12em solid #191970;
+	border-top: 0.12em solid white;
+	height: 0.64em;
+}
+.lines-top {
+	width: 100%;
+	margin-top: 2.8em;
+}
+.lines-top > div {
+	margin-bottom: 0.4em;
+	border-bottom: 0.12em solid #191970;
+	border-top: 0.12em solid white;
+	height: 0.64em;
+}
+.lines-bottom > div:first-child {
+	margin-top: 0;
+}
+.hamburger {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 1em;
+	height: 20vh;
+}
+.menu {
+	font-size: 3em;
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	font-weight: 300;
+	align-self: start;
+	color: #191970;
+	margin-top: 1em;
+	margin-left: -0.8em;
+}
+#shrunken-bar-menu {
+	font-size: 2em;
+	display: flex;
+	flex-direction: column;
+	padding-right: 2em;
+	transition: all 0.5s;
+}
+#shrunken-bar-menu:hover {
+	padding-right: 1.5em;
+}
+.menu-list {
+	list-style: none;
+}
+.menu-list-item {
+	padding-top: 0.3em;
+}
+.menu-list-item > a {
+	font-size: 0.9em;
+	/* border-bottom: none; */
+	text-decoration: none;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.menu-list-item > a:hover {
+	color: #cacbce;
+	border-bottom: 0.1em solid #cacbce;
+	border-left: 0.1em solid #cacbce;
+	padding-left: 0.1em;
+	font-size: 1em;
+}
+.post-link-click-style {
+	color: #cacbce;
+	border-bottom: 0.1em solid #cacbce;
+	border-left: 0.1em solid #cacbce;
+	padding-left: 0.2em;
+	font-size: 1em;
+}
